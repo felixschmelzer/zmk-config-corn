@@ -25,6 +25,34 @@
             bindings = <&kp LA(U) &kp A>;
             label = "UMLAUTAMAC";
         };
+
+        umlautOmac: umlautOmac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp O>;
+            label = "UMLAUTOMAC";
+        };
+
+        umlautUmac: umlautUmac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp U>;
+            label = "UMLAUTUMAC";
+        };
+
+        umlautSmac: umlautSmac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(U) &kp U>;
+            label = "UMLAUTSMAC";
+        };
+
+        euroSign: euroSign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_ALT &kp LEFT_SHIFT &kp NUMBER_2>;
+            label = "EUROSIGN";
+        };
     };
 
     keymap {
@@ -77,10 +105,10 @@
 
         umlaute {
             bindings = <
-&trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &umlautAmac  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans       &trans       &euroSign  &trans  &trans    &trans  &umlautUmac  &trans  &umlautOmac  &trans  &trans
+&trans  &umlautAmac  &umlautSmac  &trans     &trans  &trans    &trans  &trans       &trans  &trans       &trans  &trans
+&trans  &trans       &trans       &trans     &trans  &trans    &trans  &trans       &trans  &trans       &trans  &trans
+                                  &trans     &trans  &trans    &trans  &trans       &trans
             >;
         };
     };
