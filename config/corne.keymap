@@ -43,14 +43,14 @@
         umlautSmac: umlautSmac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp S>;
+            bindings = <&kp LA(S)>; // Left Alt (Option) + S together
             label = "UMLAUTSMAC";
         };
 
         euroSign: euroSign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp LEFT_SHIFT &kp NUMBER_2>;
+            bindings = <&kp RA(LS(NUMBER_2))>; // Right Alt + Left Shift + 2
             label = "EUROSIGN";
         };
     };
