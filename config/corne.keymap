@@ -43,7 +43,7 @@
         umlautSmac: umlautSmac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp U>;
+            bindings = <&kp LA(U) &kp S>;
             label = "UMLAUTSMAC";
         };
 
